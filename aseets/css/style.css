@@ -1,0 +1,139 @@
+* {
+    margin: 0%;
+    padding: 0%;
+}
+
+.main_container {
+    display: grid; 
+    grid-template-areas: 
+    "header"
+    "select"
+    "asidebar"
+    "gallery"
+    "footer" ;
+    grid-template-rows: 1fr 8fr 1fr;
+    height: 100vh;
+
+   
+
+}
+.header{
+    background-color: rgb(1, 1, 103);
+    grid-area: header;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    
+
+}
+.asidebar{
+   
+    display: none;
+    grid-area: asidebar;
+
+
+}
+.gallery {
+    background-color: rgb(255, 255, 255);
+     grid-area: gallery;
+     display: grid;
+     grid-template-columns: 1fr 1fr 1fr;
+     gap: 20px;
+     padding: 20px;
+     display: flex;
+     flex-direction: column;
+}
+.footer{
+   background-color: rgb(15, 15, 161);
+    grid-area: footer;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    color: white;
+    
+}
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    justify-content: space-between;
+    border: solid;
+    
+}
+.card img {
+    width: 100%;
+    
+    object-fit: cover;
+ 
+}
+.btnC {
+    background-color: rgb(15, 15, 161);
+    color: white;
+    width: 100%;
+    padding: 6px;
+}
+
+@media (min-width: 576px ) {
+    .main_container {
+        grid-template-areas: 
+        "header select"
+        "header gallery"
+        "asidebar gallery"
+        "footer gallery";
+        display: grid;
+        grid-template-columns: 1fr 4fr;
+        grid-template-rows: 0.5fr 0.5fr 8fr 0.5fr;
+        
+ }   
+ .select {
+    width: 100%;
+    padding: 16px 20px;
+    border: none;
+    border-radius: 4px;
+    background-color: #f1f1f1;
+    grid-area: select;
+    display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+.asidebar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(158, 162, 159);
+    grid-area: asidebar;
+    gap: 30px;
+    padding: 30px;
+    
+    
+    }
+    .header { 
+        display: flex;
+        
+        
+        }
+        .gallery {
+            background-color: rgb(255, 255, 255);
+             grid-area: gallery;
+             display: grid;
+             grid-template-columns: 1fr 1fr 1fr;
+             gap: 20px;
+             padding: 20px;
+             
+}
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    justify-content: space-between;
+    border: solid;
+}
+
+
+}
+
+
+
